@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiWindowsCustomizationSample.MainPage"
+             BackgroundColor="{AppThemeBinding Light={StaticResource LightColor}, Dark={StaticResource DarkColor}}">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="25" Padding="30">
+
+            <Label 
+                Text="Hello, World!"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+            <Label 
+                Text="Use the button to toggle ExtendsContentIntoTitleBar. Notice how the hover color for the min, max, close button work/don't work."
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <Label 
+                Text=""
+                FontSize="18"
+                FontAttributes="Bold"
+                x:Name="CounterLabel"
+                HorizontalOptions="Center" />
+
+            <Button 
+                Text="Extend Content To Titlebar (toggle)"
+                FontAttributes="Bold"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Center" />
+
+            <Button 
+                Text="Toggle FullScreen"
+                FontAttributes="Bold"
+                Clicked="Button_Clicked"
+                HorizontalOptions="Center" />
+
+            <Image
+                Source="dotnet_bot.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                WidthRequest="250"
+                HeightRequest="310"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
